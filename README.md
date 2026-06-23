@@ -24,6 +24,20 @@ API: `http://localhost:4000`
 
 ## Produccion / VPS
 
+Recomendado para que OpenClaw lo administre:
+
+```bash
+cd /root
+git clone https://github.com/kiupets/Viandas.git
+cd Viandas
+docker compose up -d --build
+docker compose exec app npm run seed
+```
+
+Ver guia completa en `DEPLOY-VPS.md`.
+
+### Sin Docker
+
 ```bash
 npm install
 npm run seed
