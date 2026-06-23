@@ -6,7 +6,7 @@ Este deploy deja la app y Mongo corriendo en Docker, con datos persistentes en e
 
 ```bash
 apt update
-apt install -y docker.io docker-compose-plugin
+apt install -y docker.io docker-compose
 systemctl enable --now docker
 ```
 
@@ -28,19 +28,19 @@ git pull
 ## 3. Levantar app + Mongo
 
 ```bash
-docker compose up -d --build
+docker-compose up -d --build
 ```
 
 ## 4. Cargar datos iniciales
 
 ```bash
-docker compose exec app npm run seed
+docker-compose exec app npm run seed
 ```
 
 ## 5. Ver logs
 
 ```bash
-docker compose logs -f app
+docker-compose logs -f app
 ```
 
 La app queda escuchando en:
@@ -58,8 +58,8 @@ http://127.0.0.1:4000
 ## Comandos utiles
 
 ```bash
-docker compose ps
-docker compose restart app
-docker compose down
-docker compose up -d --build
+docker-compose ps
+docker-compose restart app
+docker-compose down
+docker-compose up -d --build
 ```

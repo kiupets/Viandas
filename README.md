@@ -36,6 +36,13 @@ docker compose exec app npm run seed
 
 Ver guia completa en `DEPLOY-VPS.md`.
 
+Si el VPS usa Docker Compose viejo:
+
+```bash
+docker-compose up -d --build
+docker-compose exec app npm run seed
+```
+
 ### Sin Docker
 
 ```bash
